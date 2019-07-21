@@ -20,7 +20,7 @@ export class ErrorInterceptor implements HttpInterceptor {
       catchError(error => {
         if (error instanceof HttpErrorResponse) {
           if (error.status === 401) { return throwError(error.statusText); }
-          if (error.status === 400) { return throwError('Username already exists!'); } // fix username exists
+          if (error.status === 400) { return throwError(error.statusText); } // fix username exists
           const applicationError = error.headers.get('Application-Error');
           if (applicationError) {
             console.error(applicationError);
