@@ -19,9 +19,6 @@ namespace DatingApp.API.Dtos
         public string KnownAs { get; set; }
 
         [Required]
-        public string MyProperty { get; set; }
-
-        [Required]
         public DateTime DateOfBirth { get; set; }
 
         [Required]
